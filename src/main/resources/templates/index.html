@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>Spring Web Registration Form Demo</title>
+    <div th:replace="fragments :: header"/>
+</head>
+<body>
+<div th:replace="fragments :: navigation"/>
+<div class="container">
+    <div class="bg-light p-5 rounded-lg m-3">
+        <h1>Auth Client Demo</h1>
+        <p class="lead">Implementing Third-Party Login Support</p>
+        <hr class="my-4">
+        <p>Let's get started!</p>
+        <div class="d-grid gap-2">
+            <a class="btn btn-outline-primary btn-lg" href="/register" role="button">Click here to register</a><br />
+        </div>
+    </div>
+</div>
+<div th:replace="fragments :: footer"/>
+</body>
+</html>
