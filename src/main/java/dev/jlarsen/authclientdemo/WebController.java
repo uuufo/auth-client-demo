@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
@@ -35,22 +36,6 @@ public class WebController {
     @Autowired
     OAuth2AuthorizedClientService oAuth2AuthorizedClientService;
 
-    // todo - implement user interface
-//    @GetMapping("/")
-//    public String index(Model model,
-//                        @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
-//                        @AuthenticationPrincipal OAuth2User oauth2User) {
-//        model.addAttribute("userName", oauth2User.getName());
-//        model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
-//        model.addAttribute("userAttributes", oauth2User.getAttributes());
-//        return "index";
-//    }
-
-    @GetMapping(value = "/public")
-    public String publicEndpoint() {
-        RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(serverUri + "/api/public", String.class);
-    }
 
     @GetMapping(value = "/private")
     public Map<String, Object> privateEndpoint(Authentication authentication) {

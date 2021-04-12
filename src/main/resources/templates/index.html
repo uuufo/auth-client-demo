@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
-    <title>Spring Web Registration Form Demo</title>
+    <title>OAuth 2.0 Client Demo</title>
     <div th:replace="fragments :: header"/>
 </head>
 <body>
@@ -9,11 +9,13 @@
 <div class="container">
     <div class="bg-light p-5 rounded-lg m-3">
         <h1>Auth Client Demo</h1>
-        <p class="lead">Implementing Third-Party Login Support</p>
+        <p class="lead">Access resource server using token issued by authorization server.</p>
         <hr class="my-4">
-        <p>Let's get started!</p>
         <div class="d-grid gap-2">
-            <a class="btn btn-outline-primary btn-lg" href="/register" role="button">Click here to register</a><br />
+            <a class="btn btn-outline-primary btn-lg" href="/public" role="button">/public</a><br />
+            <a class="btn btn-outline-primary btn-lg" href="/private" role="button">/private</a><br />
+            <a class="btn btn-outline-primary btn-lg" href="/transactions" role="button">/transactions</a><br />
+
         </div>
     </div>
 </div>

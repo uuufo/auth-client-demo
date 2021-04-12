@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>OAuth 2.0 Client Demo</title>
+    <div th:replace="fragments :: header"/>
+</head>
+<body>
+<div th:replace="fragments :: navigation"/>
+<div class="container">
+    <div class="bg-light p-5 rounded-lg m-3">
+        <p class="lead" th:text="${response}"></p>
+    </div>
+</div>
+<div th:replace="fragments :: footer"/>
+</body>
+</html>

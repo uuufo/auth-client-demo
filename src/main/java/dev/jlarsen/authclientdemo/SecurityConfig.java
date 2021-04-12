@@ -13,7 +13,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .mvcMatchers("/public").permitAll()
+                .mvcMatchers("/", "/webjars/**", "/public").permitAll()
                 .mvcMatchers("/private", "/transactions").authenticated()
                 .and()
                 .authorizeRequests()
