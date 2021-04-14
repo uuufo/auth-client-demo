@@ -8,7 +8,6 @@
         <meta name="author" content="Jared Larsen">
         <!--    <link rel="icon" href="../../favicon.ico" />-->
         <link href="/webjars/bootstrap/5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="/resources/static/css/main.css" rel="stylesheet"/>
     </div>
 </head>
 <body>
@@ -46,7 +45,6 @@
                 </ul>
                 <form class="d-flex"  action="#" th:action="@{/logout}" method="post">
                     <div sec:authorize="isAuthenticated()">
-                        <a class="btn btn-success" href="/profile" role="button">Profile</a>
                         <input class="btn btn-outline-success" type="submit" value="Log out"/>
                     </div>
                     <div sec:authorize="isAnonymous()">
